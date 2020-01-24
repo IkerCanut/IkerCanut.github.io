@@ -1,449 +1,217 @@
 <!DOCTYPE html>
 <html>
-  <title>Logistica Inversa</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-  <link rel="stylesheet" href="./styles.css" />
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Raleway"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-  />
+<head>
+  <title>ELKAR Asesoramiento Estratégico para Empresas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Nunito:600|Quicksand&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="./style.css" type="text/css">
+</head>
 
-  <body>
-    <!-- Navbar (sit on top) -->
-    <div class="w3-top">
-      <div class="w3-bar myGreen w3-card" id="myNavbar">
-        <img
-          src="./img/LogoLogInv.png"
-          class="Logo"
-          alt="Log Inv"
-          width="55"
-          height="55"
-        />
-        <!-- Right-sided navbar links -->
-        <div class="w3-right w3-hide-small w3-hide-medium">
-          <a href="#what" class="w3-bar-item w3-button"> QUE HACEMOS?</a>
-          <a href="#about" class="w3-bar-item w3-button"> SOBRE NOSOTROS</a>
-          <a href="#prensa" class="w3-bar-item w3-button"
-            ><i class="fa fa-th"></i> PRENSA</a
-          >
-          <a href="#team" class="w3-bar-item w3-button"
-            ><i class="fa fa-user"></i> EQUIPO</a
-          >
-          <a href="#contact" class="w3-bar-item w3-button"
-            ><i class="fa fa-envelope"></i> CONTACTO</a
-          >
-        </div>
-        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+<body>
+<!-- Delay JS Loading-->
+<script>
+  window.onload = function(){
+    var element = document.createElement("script");
+    element.src = "./script.js";
+    document.body.appendChild(element);
+  }
+</script>
 
-        <a
-          href="javascript:void(0)"
-          class="w3-bar-item w3-button w3-right w3-hide-large
-           "
-          onclick="w3_open()"
-        >
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-brown w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>ELKAR</b></a>
+    <!-- Float links to the right. Hide them on small - medium screens -->
+    <div class="w3-right w3-hide-small w3-hide-medium">
+      <a href="#who" class="w3-bar-item w3-button">¿Quiénes somos?</a>
+      <a href="#consult" class="w3-bar-item w3-button">Consultoría Estratégica</a>
+      <a href="#formation" class="w3-bar-item w3-button">Formación</a>
+      <a href="#additional" class="w3-bar-item w3-button">Servicios Adicionales</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contacto</a>
     </div>
-
-    <!-- Sidebar on small screens when clicking the menu icon -->
-    <nav
-      class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-large"
-      style="display:none"
-      id="mySidebar"
-    >
-      <a
-        href="javascript:void(0)"
-        onclick="w3_close()"
-        class="w3-bar-item w3-button w3-large w3-padding-16"
-        >Cerrar x</a
-      >
-      <a href="#what" onclick="w3_close()" class="w3-bar-item w3-button">QUE HACEMOS?</a>
-      <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">SOBRE NOSOTROS</a>
-      <a href="#prensa" onclick="w3_close()" class="w3-bar-item w3-button">PRENSA</a>
-      <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">EQUIPO</a>
-      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACTO</a>
-    </nav>
-
-    <!-- Header with full-height image -->
-    <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-      <div class="w3-display-left w3-text-white" style="padding:48px">
-        <span
-          class="w3-jumbo w3-hide-small"
-          style="text-shadow: 3px 3px 3px black; color: #a8e2b4;"
-          >Gestionamos tus residuos </br> de construccion</span
-        ><br />
-        <span class="w3-xxxlarge w3-hide-large w3-hide-medium"
-        style="text-shadow: 3px 3px 3px black; color: #a8e2b4;"
-          >Gestionamos tus residuos de construccion</span
-        ><br />
-        <span class="w3-xlarge"
-        style="text-shadow: 3px 3px 3px black; color: #a8e2b4;"
-          >Valorizá tu residuo de obra. </br>
-          Formá parte de una solución de impacto económico, social y ambiental.
-          </span
-        >
-        <p>
-          <a
-            href="#what"
-            class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off"
-            >CONOCE MAS SOBRE NOSOTROS</a
-          >
-        </p>
-      </div>
-      <div
-        class="w3-display-bottomleft w3-text-grey w3-large"
-        style="padding:24px 48px"
-      ></div>
-    </header>
-
-    <!-- Que hacemos? -->
-    <div class="w3-container" style="padding:128px 16px" id="what">
-      <h3 class="w3-center">QUE HACEMOS?</h3>
-      <p class="w3-center w3-large">
-        Buscamos la reinsercion de los desechos de obra en el mercado.
-      </p>
-      <div class="w3-row-padding w3-center" style="margin-top:64px">
-        <div class="w3-quarter">
-          <i class="fa fa-book w3-margin-bottom w3-jumbo"></i>
-          <p class="w3-large">Capacitate</p>
-          <p style="padding-left: 20px; padding-right: 20px">
-            ¿Queres capacitarte como empresa en el tratamiento de residuos?
-          </p>
-        </div>
-        <div class="w3-quarter">
-          <i class="fa fa-industry w3-margin-bottom w3-jumbo w3-center"></i>
-          <p class="w3-large">Empresas Generadoras</p>
-          <p style="padding-left: 20px; padding-right: 20px">
-            ¿Eres constructor y quieres gestionar los residuos de tu obra de
-            forma responsable con el medio ambiente?
-          </p>
-        </div>
-        <div class="w3-quarter">
-          <i class="fa fa-truck w3-margin-bottom w3-jumbo"></i>
-          <p class="w3-large">Transportistas</p>
-          <p style="padding-left: 20px; padding-right: 20px">
-            ¿Eres transportista y quieres sumar tus camiones a nuestra red de
-            gestión de residuos?
-          </p>
-        </div>
-        <div class="w3-quarter">
-          <i class="fa fa-recycle w3-margin-bottom w3-jumbo"></i>
-          <p class="w3-large">Empresas Recicladoras</p>
-          <p style="padding-left: 20px; padding-right: 20px">
-            ¿Tienes una planta de tratamiento de residuos?
-          </p>
-        </div>
-      </div>
-      <h3 class= "w3-center">
-      </br>Comunicate con nosotros!
-      </h3>
-    </div>
-
-    <!-- Promo Section "Statistics" -->
-    <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
-      <div class="w3-third">
-        <span class="w3-xxlarge">12+</span>
-        <br />Partners
-      </div>
-      <div class="w3-third">
-        <span class="w3-xxlarge">5+</span>
-        <br />Proyectos Terminados
-      </div>
-      <div class="w3-third">
-        <span class="w3-xxlarge">800+</span>
-        <br />Kilos de Material Reciclado
-      </div>
-    </div>
-
-    <!-- About Section -->
-    <div class="w3-container" style="padding:128px 16px;" id="about">
-      <h3 class="w3-center">SOBRE NOSOTROS</h3>
-
-      <p class="w3-center w3-medium" style="padding-left: 20px; padding-right: 20px">Nuestra unión nació en el “Start Up Weekend” Rosario, evento que asiduamente se lleva a cabo en numerosas ciudades del
-      mundo, y que en Junio 2019 lanzó el desafío de lograr ideas innovadoras que impliquen soluciones sustentables. Obtuvimos
-      el primer premio con nuestro proyecto “Logística Inversa”, lo que nos permitió participar de la competición mundial
-      “Global Sustainable Revolution”, y fuimos uno de los 5 proyectos ganadores.</br></br> 
-      
-      Conformamos un equipo altamente interdisciplinario: arquitectura, abogacía, economía, ingeniería e informática; todos
-      unidos por la inquietud de generar soluciones de triple impacto en el planeta. Proactivos, entusiastas y apasionados por
-      el logro de nuestro objetivo: concientizar a la sociedad sobre la contaminación ambiental, con foco en la producida en
-      la industria de la construcción; y reducirla mediante la articulación de un sistema eficiente de gestión de residuos
-      generados en obra.</br> </p>
-      <p class="w3-center w3-large">
-        <b>
-          Caracteristicas claves de nuestra empresa</p>
-        </b>
-      <div class="w3-row-padding w3-center" style="margin-top:64px">
-        <div class="w3-half">
-          <div class="w3-third" style="padding-left: 20px; padding-right: 20px">
-            <i class="fa fa-leaf w3-margin-bottom w3-jumbo"></i>
-            <p class="w3-medium">Trabajo Sostenible</p>
-          </div>
-          <div class="w3-third" style="padding-left: 20px; padding-right: 20px">
-            <i class="fa fa-rocket w3-margin-bottom w3-jumbo"></i>
-            <p class="w3-medium">Vision</p>
-          </div>
-          <div class="w3-third" style="padding-left: 20px; padding-right: 20px">
-            <i class="fa fa-handshake-o w3-margin-bottom w3-jumbo"></i>
-            <p class="w3-medium">Compromiso</p>
-          </div>
-        </div>
-        <div class="w3-half">
-          <div class="w3-third" style="padding-left: 20px; padding-right: 20px">
-            <i class="fa fa-lightbulb-o w3-margin-bottom w3-jumbo"></i>
-            <p class="w3-medium">Innovacion</p>
-          </div>
-          <div class="w3-third" style="padding-left: 20px; padding-right: 20px">
-            <i class="fa fa-paint-brush w3-margin-bottom w3-jumbo"></i>
-            <p class="w3-medium">Diseño</p>
-          </div>
-          <div class="w3-third" style="padding-left: 20px; padding-right: 20px">
-            <i class="fa fa-heart-o w3-margin-bottom w3-jumbo"></i>
-            <p class="w3-medium">Pasion</p>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-
-    <!-- Work Section -->
-    <div class="w3-container" style="padding:128px 16px" id="prensa">
-      <h3 class="w3-center">PRENSA</h3>
-      <div class="w3-row-padding w3-grayscale-min" style="margin-top:64px">
-        <div class="w3-col m6 w3-margin-bottom">
-          <div class="w3-card">
-            <img src="./img/002.jpeg" alt="LaCapital" style="width:100%" />
-            <div class="w3-container">
-              <h3>La Capital</h3>
-              <h5>
-                Desarrollaron una app para disminuir residuos y ganaron
-              </h5>
-              <p>
-                <button
-                  class="w3-button w3-light-grey w3-block"
-                  onclick="openInNewTab('https://www.lacapital.com.ar/la-ciudad/desarrollaron-una-app-disminuir-residuos-y-ganaron-n2512115.html')"
-                >
-                  <i class="fa fa-newspaper-o"></i> Leer Noticia
-                </button>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="w3-col m6 w3-margin-bottom">
-          <div class="w3-card">
-            <img src="./img/007.jpg" alt="photo" style="width:100%" />
-            <div class="w3-container">
-              <h3>PuntoBiz</h3>
-              <h5>
-                Crearon una app para aprovechar los residuos que dejan las
-                constructoras
-              </h5>
-              <p>
-                <button
-                  class="w3-button w3-light-grey w3-block"
-                  onclick="openInNewTab('https://puntobiz.com.ar/noticias/val/124825/val_s/76/crearon-una-app-para-aprovechar-los-residuos-que-dejan-las-constructoras.html')"
-                >
-                  <i class="fa fa-newspaper-o"></i> Leer Noticia
-                </button>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="w3-col m6 w3-margin-bottom">
-          <div class="w3-card">
-            <img src="./img/006.jpg" alt="photo" style="width:100%" />
-            <div class="w3-container">
-              <h3>Heroes Don Web</h3>
-              <h5>
-                ¿Cómo construir una startup con los residuos?
-              </h5>
-              <p>
-                <button
-                  class="w3-button w3-light-grey w3-block"
-                  onclick="openInNewTab('http://heroesdonweb.com/carolina-estelles-como-construir-una-startup-con-los-residuos/')"
-                >
-                  <i class="fa fa-newspaper-o"></i> Leer Noticia
-                </button>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="w3-col m6 w3-margin-bottom">
-          <div class="w3-card">
-            <img src="./img/FALSOVIVO.jpg" alt="photo" style="width:100%" />
-            <div class="w3-container">
-              <h3>Radio UNR</h3>
-              <h5>
-                Innovadores, de Rosario a París
-              </h5>
-              <p>
-                <button
-                  class="w3-button w3-light-grey w3-block"
-                  onclick="openInNewTab('https://radio.unr.edu.ar/nota/5002/innovadores-de-rosario-a-paris')"
-                >
-                  <i class="fa fa-newspaper-o"></i> Leer Noticia
-                </button>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="w3-col m6 w3-margin-bottom">
-          <div class="w3-card">
-            <img src="./img/BuenDia.jpg" alt="photo" style="width:100%" />
-            <div class="w3-container">
-              <h3>Buen Dia Rosario</h3>
-              <h5>
-                Crean novedosa app
-              </h5>
-              <p>
-                <button
-                  class="w3-button w3-light-grey w3-block"
-                  onclick="openInNewTab('https://www.youtube.com/watch?v=JCDEzgduvYQ&feature=youtu.be')"
-                >
-                  <i class="fa fa-video-camera"></i> Ver Video
-                </button>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="w3-col m6 w3-margin-bottom">
-          <div class="w3-card">
-            <img src="./img/StartupWeekend.jpg" alt="photo" style="width:100%" />
-            <div class="w3-container">
-              <h3>Global Startup Weekend</h3>
-              <h5>
-                Winner of GSWSR Rosario's edition
-              </h5>
-              <p>
-                <button
-                  class="w3-button w3-light-grey w3-block"
-                  onclick="openInNewTab('https://www.youtube.com/watch?v=FNZZPTgsls8')"
-                >
-                  <i class="fa fa-video-camera"></i> Ver Video
-                </button>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Team Section -->
-    <div class="w3-container" style="padding:128px 16px" id="team">
-      <h3 class="w3-center">EQUIPO</h3>
-      <p class="w3-center w3-large">¿Quienes somos?</p>
-      <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
-        <div class="w3-col w3-margin-bottom">
-          <div class="w3-card w3-center">
-            <img src="./img/GRUPO.jpg" alt="photo" style="width:70%" />
-          </div>
-          <p class="w3-center">
-            Verger, Victoria - Modestini, Anner - Nallino, Paula </br>
-            Estelles, Carolina - Roccuzzo, Franco - Canut, Iker - Pecorari, Franco
-          </p>
-      </div>
-    </div>
-    <!-- Modal for full size images on click-->
-    <div
-      id="modal01"
-      class="w3-modal w3-black"
-      onclick="this.style.display='none'"
-    >
-      <span
-        class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright"
-        title="Close Modal Image"
-        >×</span
-      >
-      <div
-        class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64"
-      >
-        <img id="img01" class="w3-image" />
-        <p id="caption" class="w3-opacity w3-large"></p>
-      </div>
-    </div>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+  </div>
 </div>
-    <!-- Contact Section -->
-    <div
-      class="w3-container w3-light-grey"
-      style="padding:128px 16px"
-      id="contact"
-    >
-      <h3 class="w3-center">CONTACTO</h3>
-      <p class="w3-center w3-large">Envianos un mensaje: </p>
-      <div style="margin-top:48px">
-        <p>
-          <i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>
-          Rosario, ARG
-        </p>
-        <p>
-          <i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Telefono:
-          +5493416278880
-        </p>
-        <!--
-        <p>
-          <i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i>
-          Email: logistica@mail.com
-        </p>
-        -->
-        <br />
-        
-      </div>
-    </div>
 
-    <!-- Footer -->
-    <footer class="w3-center w3-black w3-padding-64">
-      <a href="#home" class="w3-button w3-light-grey"
-        ><i class="fa fa-arrow-up w3-margin-right"></i>Inicio</a
-      >
+<!-- Sidebar on small - medium screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Cerrar x</a>
+
+  <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">ELKAR</a>
+  <a href="#who" onclick="w3_close()" class="w3-bar-item w3-button">¿QUIÉNES SOMOS?</a>
+  <a href="#consult" onclick="w3_close()" class="w3-bar-item w3-button">CONSULTORÍA ESTRATÉGICA</a>
+  <a href="#formation" onclick="w3_close()" class="w3-bar-item w3-button">FORMACIÓN</a>
+  <a href="#additional"Architects onclick="w3_close()" class="w3-bar-item w3-button">SERVICIOS ADICIONALES</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACTO</a>
+</nav>
+
+<!--Photo by Vince Fleming on Unsplash-->
+<!--Photo by Marija Zaric on Unsplash-->
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="./vince.jpg" alt="Wallpaper" width="1500" height="800">
+  <div class="w3-display-left w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white w3-hide-small w3-hide-medium"><span class="w3-padding w3-black w3-opacity-min"><b>ELKAR</b></span><span class="w3-padding w3-white w3-hide-small w3-hide-medium w3-text-black">Asesoramiento Estratégico para Empresas</span></h1>
+    <h1 class="w3-xxlarge w3-text-white w3-hide-small w3-hide-large"><span class="w3-padding w3-black w3-opacity-min"><b>ELKAR</b></span><span class="w3-padding w3-hide-small w3-white w3-hide-large w3-text-black">Asesoramiento Estratégico</span></h1>
+    <h1 class="w3-xxlarge w3-text-white w3-hide-medium w3-hide-large"><span class="w3-padding w3-black w3-opacity-min"><b>ELKAR</b></span></h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <h3 class="w3-hide-medium w3-hide-large"><b>Asesoramiento Estratégico para Empresas</b></h3>
+  <!-- WHO SECTION -->
+  <div class="w3-container w3-padding-32" id="who">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>¿QUIÉNES SOMOS?</b></h3>
+    <div class="w3-container w3-padding-32">
+      <h4><b>¿QUÉ ES ELKAR?</b></h4>
+      <h4><b>ELKAR</b> es una empresa dedicada a la generación de Estrategias para gestionar el Cambio permanente potenciando el recambio generacional haciendo foco en el trabajo en equipos de alto rendimiento.</h4>
+      <h4>Desde <b>ELKAR</b> acompañamos a las organizaciones empresariales y gubernamentales en el diseño de sus propias estrategias, somos facilitadores del cambio.</h4>
+      <h4><b>ELKAR</b> cuenta con una amplia red de especialistas con trayectoria probada en el mercado, líderes de proyecto con gran experiencia en gestión, que ponemos a disposición de nuestros clientes.</h4>
+      <h4>Nuestra metodología de trabajo es por Proyecto, gestionando cada uno de ellos a través de un Líder y colaboradores que se desempeñan en las distintas actividades que involucre el plan definido de común acuerdo con nuestros clientes.</h4>
+      <h4>Diseñar una estrategia implica partir de un análisis situacional correcto, tener en claro el Objetivo, hacia donde vamos y para que queremos llegar ahí.</h4>
+      <h4>La estrategia responde básicamente a la pregunta ¿cómo vamos a hacer para llegar a nuestro objetivo? , ¿con qué recursos contamos? ¿quién hace qué cosa? </h4>
+      <h4>Por todo ello, desde <b>ELKAR</b> nos enfocamos en hacer las preguntas correctas para poder luego diseñar la estrategia adecuada, aportando una nueva mirada a los problemas tradicionales.</h4>
+      <h4>Nunca perdemos de vista el principal concepto de la Ingeniería Humanística: Formar personas, que mejoren procesos para obtener mejores resultados.</h4>
+      <h4>Creemos firmemente que la base de la transformación comienza por la formación de las personas, el recurso más valiosa con el que cuentan las empresas y las organizaciones en general.</h4>
       
-      <p>
-        Powered by
-        <a
-          href="https://www.w3schools.com/w3css/default.asp"
-          title="W3.CSS"
-          target="_blank"
-          class="w3-hover-text-green"
-          >w3.css</a
-        >
-      </p>
-    </footer>
+      <br>
+      <hr>
 
-    <script>
-      // Modal Image Gallery
-      function onClick(element) {
-        document.getElementById('img01').src = element.src;
-        document.getElementById('modal01').style.display = 'block';
-        var captionText = document.getElementById('caption');
-        captionText.innerHTML = element.alt;
-      }
+      <h4><b>METODOLOGÍA</b></h4>
+      <ul>
+        <li><h4><b>ANALISIS</b>: Reflexión – Análisis Situacional - Diagnóstico</h4></li>
+        <li><h4><b>DISEÑO</b>: Decisión – Estrategia – Plan</h4></li>
+        <li><h4><b>IMPLANTACION</b>: Acción – Resultados – Mediciones</h4></li>
+      </ul>
+      <h4>Retroalimentación, aprendizaje y mejoras. Nuevas reflexiones. Arranca nuevamente el círculo virtuoso del planeamiento estratégico como herramienta para afrontar el cambio permanente.</h4>
 
-      // Toggle between showing and hiding the sidebar when clicking the menu icon
-      var mySidebar = document.getElementById('mySidebar');
+      <ol>
+        <li><h4><b>Fase de Análisis:</b></h4>
+          <ul>
+            <li><h4>Datos 360° de la empresa u organismo</h4></li>
+            <li><h4>Visión compartida por todos</h4></li>
+            <li><h4>Diagnóstico situacional</h4></li>
+          </ul>
+        </li>
+        <li><h4><b>Fase de Diseño:</b></h4>
+          <ul>
+            <li><h4>Plan de acción integral</h4></li>
+            <li><h4>Tablero de indicadores</h4></li>
+            <li><h4>Definición de Tareas, Plazos y responsables</h4></li>
+          </ul>
+        </li>
+        <li><h4><b>Fase de Implantación:</b></h4>
+          <ul>
+            <li><h4>Acciones</h4></li>
+            <li><h4>Reuniones de monitoreo de resultados</h4></li>
+            <li><h4>Correcciones de desvíos</h4></li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </div>
 
-      function w3_open() {
-        if (mySidebar.style.display === 'block') {
-          mySidebar.style.display = 'none';
-        } else {
-          mySidebar.style.display = 'block';
-        }
-      }
+  <br>
+  <hr>
 
-      // Close the sidebar with the close button
-      function w3_close() {
-        mySidebar.style.display = 'none';
-      }
+  <!-- CONSULT SECTION -->
+  <div class="w3-container w3-padding-32" id="consult">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>CONSULTORÍA ESTRATÉGICA</b></h3>
+    <div class="w3-container w3-padding-32">
+      <h4>En un entorno cambiante y altamente competitivo es fundamental planificar y para ello el punto de partida es la decisión empresarial o política de emprender ese camino de la Planificación Estratégica.</h4>
+      <h4>Ello llevará a empresa a obtener resultados competitivos y sostenibles en el tiempo.</h4>
+      <h4>Ello llevará a empresa a obtener resultados competitivos y sostenibles en el tiempo.</h4>
+      <h4>Esto implica Confianza y Compromiso Mutuo en este proceso tan técnico como emocional.</h4>
+      <hr>
+      <h4><b>Áreas de Trabajo:</b></h4>
+      <h4>En general para todos los tipos de empresas:</h4>
+      <ul>
+        <b><li><h4>Elaboración y seguimiento de Planes Estratégicos</h4></li></b>
+        <b><li><h4>Marketing</h4></li></b>
+        <b><li><h4>Ventas</h4></li></b>
+        <b><li><h4>Posventa y Fidelización</h4></li></b>
+        <b><li><h4>Procesos de negocio</h4></li></b>
+        <b><li><h4>Innovación y Desarrollo de Productos</h4></li></b>
+        <b><li><h4>Soluciones de Tecnologías de la Información y la Comunicación (TIC) orientadas al negocio</h4></li></b>
+        <b><li><h4>Transformación Digital</h4></li></b>
+        <b><li><h4>Gestión por Proyectos</h4></li></b>
+      </ul>
+      <h4>En particular, consultoría para:</h4>
+      <ul>
+        <b><li><h4>Empresas familiares</h4></li></b>
+        <b><li><h4>Empresas de la Economía Social: Mutuales y Cooperativas, Clubes, Fundaciones, Organizaciones no gubernamentales ONG, etc.</h4></li></b>
+        <b><li><h4>Gobiernos nacionales, provinciales y municipales</h4></li></b>
+        <b><li><h4>Partidos y Organizaciones Sociales y Políticas</h4></li></b>
+        <b><li><h4>Startups y emprendimientos</h4></li></b>
+      </ul>
+    </div>
+  </div>
+  <hr>
+  <hr>
 
-      function openInNewTab(url) {
-        var win = window.open(url, '_blank');
-        win.focus();
-      }
-    </script>
-  </body>
+  <!-- FORMATION SECTION -->
+  <div class="w3-container w3-padding-32" id="formation">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>FORMACIÓN</b></h3>
+    <div class="w3-container w3-padding-32">
+      <ul>
+        <b><li><h4>Programas a medida para Mandos medios Jefes y Responsables</h4></li></b>
+        <b><li><h4>Programas a medida para Gerentes y Directores</h4></li></b>
+        <b><li><h4>Programas a medida para Funcionarios Públicos de carrera y Políticos</h4></li></b>
+        <b><li><h4>Programas a medida para Consejeros y Consejos de Dirección / Administración</h4></li></b>
+        <b><li><h4>Programa intensivo anual de Formación y Entrenamiento de Líderes y Equipos de Alto Rendimiento</h4></li></b>
+        <b><li><h4>Talleres</h4></li></b>
+        <b><li><h4>Coloquios – Mesas de debate</h4></li></b>
+      </ul>
+    </div>
+  </div>
+  <hr>
+
+  <!-- ADDITIONAL SECTION -->
+  <div class="w3-container w3-padding-32" id="additional">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>SERVICIOS ADICIONALES</b></h3>
+    <div class="w3-container w3-padding-32">
+      <ul>
+        <b><li><h4>Coaching personalizado para Gerentes, Funcionarios y Directivos</h4></li></b>
+        <b><li><h4>Coaching organizacional para Empresas y Gobiernos</h4></li></b>
+        <b><li><h4>Consultor Senior con Dedicación Parcial</h4></li></b>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ADDITIONAL SECTION -->
+  <div class="w3-container w3-padding-32" id="contact">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>CONTACTO</b></h3>
+    <div class="w3-container w3-padding-32">
+    <form action="/action_page.php" target="_blank">
+      <input class="w3-input w3-border" type="text" placeholder="Nombre y Apellido" required name="Name">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Teléfono" required name="Phone">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Empresa u Organismo" required name="Company">
+      <input class="w3-radio" checked type="radio" name="Service" value="ConsultoriaEstrategica"> Consultoría Estratégica<br>
+      <input class="w3-radio" type="radio" name="Service" value="Formacion"> Formación<br>
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Mensaje" required name="Mensaje">
+      <button class="w3-button w3-black w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> Enviar mensaje
+      </button>
+    </form>
+    </div>
+  </div>
+  
+
+<!-- End page content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Developed by <a href="https://www.github.com/IkerCanut" class="w3-hover-text-green">Iker Canut</a></p></span>
+</footer>
+
+</body>
 </html>
